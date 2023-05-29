@@ -3,7 +3,7 @@ export const contactInfos = [
     title: "Mail Us",
     content: "namnhn98@gmail.com",
     icon: "fa fa-envelope",
-    url: "mail:namnhn98@gmail.com",
+    url: "mailto:namnhn98@gmail.com",
   },
   {
     title: "Contact Us",

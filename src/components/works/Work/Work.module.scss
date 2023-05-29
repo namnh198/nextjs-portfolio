@@ -12,3 +12,9 @@
     object-fit: cover;
   }
 }
+
+@media (max-width: 650px) {
+  .project-img img {
+    width: 100%;
+  }
+}

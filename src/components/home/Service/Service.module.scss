@@ -16,3 +16,25 @@
     }
   }
 }
+
+@media (max-width: 1090px) {
+  .services-icon {
+    margin-bottom: 39px;
+    margin-top: 31px;
+  }
+}
+
+@media (max-width: 920px) {
+  .services-icon {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .services-icon {
+    gap: 25px;
+    i {
+      font-size: 30px;
+    }
+  }
+}

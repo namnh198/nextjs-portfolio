@@ -1,3 +1,7 @@
+.section-heading-mobile {
+  display: none;
+}
+
 .section-heading {
   margin-bottom: 15px;
   justify-content: center;
@@ -14,6 +18,20 @@
 
     .project-item {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .section-heading-mobile {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .project-row {
+    grid-template-columns: 1fr;
+
+    .section-heading {
+      display: none;
     }
   }
 }

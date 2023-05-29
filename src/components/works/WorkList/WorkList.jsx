@@ -10,6 +10,11 @@ export default function WorkList({ galleries }) {
     <section>
       <Container>
         <Row className={cx("project-row")}>
+          <Heading
+            className={cx("section-heading-mobile")}
+            animation="fade-up"
+            title="All Projects"
+          />
           <Column md={4}>
             {galleries.galleryLeft.map((project) => {
               return (
