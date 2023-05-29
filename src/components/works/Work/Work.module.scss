@@ -1,0 +1,14 @@
+.project-item {
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.project-img {
+  border-radius: 30px;
+  margin-bottom: 13px;
+  img {
+    display: block;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,64 @@
+$grid: 12;
+
+@mixin make-column($grid: 12) {
+  @for $i from 1 through $grid {
+    &-#{$i} {
+      width: percentage($number: $i / $grid);
+      flex: 0 0 auto;
+    }
+  }
+}
+
+@mixin make-column-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col {
+  flex: 1 0 0%;
+  &-auto {
+    @include make-column-auto();
+  }
+
+  @include make-column();
+}
+
+@media (min-width: 576px) {
+  .col-sm {
+    &-auto {
+      @include make-column-auto();
+    }
+
+    @include make-column();
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    &-auto {
+      @include make-column-auto();
+    }
+
+    @include make-column();
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    &-auto {
+      @include make-column-auto();
+    }
+
+    @include make-column();
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl {
+    &-auto {
+      @include make-column-auto();
+    }
+
+    @include make-column();
+  }
+}

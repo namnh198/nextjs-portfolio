@@ -1,0 +1,13 @@
+.contact-area {
+  padding-top: 80px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+}

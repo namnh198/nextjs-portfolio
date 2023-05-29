@@ -1,0 +1,109 @@
+.contact-infos {
+  width: 290px;
+  flex: none;
+  @media (max-width: 767px) and (min-width: 520px) {
+    display: flex;
+    width: 100%;
+    > * {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 34px;
+  }
+
+  h3 {
+    color: #0f0f0f;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 29px;
+    font-weight: 500;
+  }
+}
+
+.contact-details {
+  margin-bottom: 55px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    + li {
+      margin-top: 70px;
+    }
+
+    .icon-box {
+      position: relative;
+      background: #fff;
+      width: 68px;
+      height: 68px;
+      border-radius: 10px;
+      flex: none;
+      text-align: center;
+      line-height: 68px;
+      font-size: 30px;
+      color: var(--primary-color);
+    }
+
+    .right span {
+      display: block;
+      color: #bcbcbc;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 7px;
+    }
+    .right h4 {
+      color: #000;
+      font-size: 16px;
+      opacity: 0.4;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.socials {
+  @media (max-width: 767px) and (min-width: 520px) {
+    margin-left: auto;
+    text-align: right;
+
+    .social-links > li {
+      margin-left: auto;
+      margin-top: 15px;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media (max-width: 767px) and (min-width: 520px) {
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  > li > a {
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    width: 82px;
+    height: 82px;
+    line-height: 82px;
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
+    border-radius: 50%;
+    font-size: 32px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #0f0f0f;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.contact {
+  padding-top: 83px;
+  padding-bottom: 42px;
+  h1 {
+    font-size: 44x;
+    line-height: 52px;
+    font-weight: 500;
+    color: #0f0f0f;
+    margin: 0;
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  .explore {
+    position: absolute;
+    display: block;
+    right: 30px;
+    bottom: 35px;
+  }
+
+  > img {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    margin: 0;
+    opacity: 0.5;
+  }
+}

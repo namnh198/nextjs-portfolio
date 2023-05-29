@@ -1,0 +1,37 @@
+.btn {
+  background: transparent;
+  display: inline-block;
+  transition: 0.3s;
+  border-radius: 16px;
+  font-size: 16px;
+  padding: 12px 30px;
+  cursor: pointer;
+  &.primary {
+    background: #323232;
+    color: #fff;
+    &:hover {
+      background: var(--primary-color);
+    }
+  }
+  &.block {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 16px 30px;
+  }
+  &.outline {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #323232;
+    &:hover {
+      border-color: #323232;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.75;
+    cursor: no-drop;
+  }
+}

@@ -1,0 +1,18 @@
+.footer-area {
+  padding-top: 128px;
+  padding-bottom: 78px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  color: #727272;
+  font-size: 14px;
+  font-weight: 500;
+  span {
+    color: var(--primary-color);
+  }
+}

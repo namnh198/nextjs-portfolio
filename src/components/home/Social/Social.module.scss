@@ -1,0 +1,50 @@
+.socials {
+  &-list {
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 22px;
+    margin-bottom: 16px;
+    background: #fbfbfc;
+    border-radius: 30px;
+    a {
+      width: 82px;
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: relative;
+      background: #fff;
+      color: var(--primary-color);
+      transition: 0.3s;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: 0.1;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.1)
+        );
+        backdrop-filter: blur(40px);
+      }
+      &:hover {
+        color: #0f0f0f;
+        background: #fff;
+      }
+
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+}

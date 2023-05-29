@@ -1,0 +1,10 @@
+.gallery {
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 920px) {
+  .gallery {
+    flex-wrap: wrap;
+  }
+}

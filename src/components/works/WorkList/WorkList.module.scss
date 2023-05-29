@@ -1,0 +1,29 @@
+.projects-area {
+  padding-top: 65px;
+}
+
+.section-heading {
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .project-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-right {
+    flex-direction: column;
+
+    .project-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.project-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}

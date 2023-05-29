@@ -1,0 +1,36 @@
+.contact-form {
+  position: relative;
+  max-width: 765px;
+  width: 100%;
+
+  .shadow-box {
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    padding: 40px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 44px;
+    color: #0f0f0f;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    display: block;
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  button {
+    margin-top: 16px;
+  }
+}

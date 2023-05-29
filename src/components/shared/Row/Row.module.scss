@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+
+  > * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-top: 0;
+  }
+}

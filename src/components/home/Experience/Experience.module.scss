@@ -1,0 +1,46 @@
+.experience {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+
+  .experience-item {
+    position: relative;
+    border-radius: 30px;
+    text-align: center;
+    flex: 1;
+    padding: 42px 30px;
+    background: #fbfbfc;
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 34px;
+      margin-bottom: 17px;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+    p {
+      font-size: 12px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #bcbcbc;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .experience {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 585px) {
+  .experience {
+    flex-wrap: wrap;
+    justify-content: center;
+    .experience-item {
+      width: calc(50% - 12px);
+      flex: none;
+    }
+  }
+}

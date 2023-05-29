@@ -1,0 +1,14 @@
+.logo {
+  display: inline-block;
+  z-index: 16;
+  margin-right: 15px;
+
+  img {
+    display: block;
+    height: 27px;
+    width: auto;
+  }
+  &.top {
+    z-index: 16;
+  }
+}
