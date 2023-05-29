@@ -14,11 +14,17 @@ export default function ContactInfo({ settings }) {
             return (
               <li key={index} data-aos="zoom-in">
                 <div className={cx("icon-box")}>
-                  <i className={item.icon} />
+                  <a href={item.url} target="_blank">
+                    <i className={item.icon} />
+                  </a>
                 </div>
                 <div className={cx("right")}>
                   <span>{item.title}</span>
-                  <h4>{item.content}</h4>
+                  <h4>
+                    <a href={item.url} target="_blank">
+                      {item.content}
+                    </a>
+                  </h4>
                 </div>
               </li>
             );

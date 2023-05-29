@@ -3,16 +3,19 @@ export const contactInfos = [
     title: "Mail Us",
     content: "namnhn98@gmail.com",
     icon: "fa fa-envelope",
+    url: "mail:namnhn98@gmail.com",
   },
   {
     title: "Contact Us",
     content: "+84 865 636 494",
     icon: "fa fa-phone",
+    url: "tel:0865636494",
   },
   {
     title: "Location",
     content: "Ho Chi Minh city, Vietnam",
     icon: "fa fa-map-marker",
+    url: "https://www.google.com/maps/place/8+%C4%90.+S%E1%BB%91+1,+Hi%E1%BB%87p+B%C3%ACnh+Ph%C6%B0%E1%BB%9Bc,+Th%E1%BB%A7+%C4%90%E1%BB%A9c,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8468602,106.7208792,17z/data=!3m1!4b1!4m6!3m5!1s0x317528761d8e9501:0x6010cb06f4c55750!8m2!3d10.8468602!4d106.7234541!16s%2Fg%2F11qq9jj52x?entry=ttu",
   },
 ];
 
