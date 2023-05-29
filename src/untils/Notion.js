@@ -85,6 +85,7 @@ const Notion = {
         cover: this.getProperties(project.cover)?.url ?? null,
         published: this.getProperties(project.properties.published) ?? null,
         slug: this.getProperties(project.properties.slug).content,
+        url: this.getProperties(project.properties.url) || null,
         tags:
           this.getProperties(project.properties.tags, true).map(
             (x) => x.name
@@ -108,9 +109,9 @@ const Notion = {
           this.getProperties(note.properties.description)?.content ?? null,
         published: this.getProperties(note.properties.published) ?? null,
         slug: this.getProperties(note.properties.slug).content,
-        // tags:
-        //   this.getProperties(note.properties.tags, true).map((x) => x.name) ||
-        //   [],
+        tags:
+          this.getProperties(note.properties.tags, true).map((x) => x.name) ||
+          [],
         authors: this.getProperties(note.properties.authors, true),
         views: this.getProperties(note.properties.views),
       };

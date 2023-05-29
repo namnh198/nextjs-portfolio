@@ -12,7 +12,9 @@ export default function Work({ className, project, animation }) {
         className={cx("project-item", { [className]: className })}
         title={project.title}
         category={project.service}
-        href={`works/${project.slug}`}
+        to={true}
+        target="_blank"
+        href={project.url}
       >
         <div className={cx("project-img")}>
           <Image

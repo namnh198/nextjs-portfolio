@@ -57,16 +57,20 @@ const WidgetImage = ({ image, alt }) => {
 };
 
 export const Explore = ({ className, overlay = true, href, to, children }) => {
-  let ExploreLink = Link;
+  let ExploreLink = Link,
+    props = {
+      href,
+    };
   if (to) {
     ExploreLink = "a";
+    props = { ...props, ...{ target: "_blank" } };
   }
   return (
     <>
-      {overlay && <ExploreLink href={href} className={cx("overlay-link")} />}
+      {overlay && <ExploreLink className={cx("overlay-link")} {...props} />}
       <div className={cx("explore", { [className]: className })}>
         {children}
-        <ExploreLink href={href} className={cx("explore-btn")}>
+        <ExploreLink className={cx("explore-btn")} {...props}>
           <ImageTheme
             srcDark={ExploreIconDark.src}
             srcLight={ExploreIconLight.src}
