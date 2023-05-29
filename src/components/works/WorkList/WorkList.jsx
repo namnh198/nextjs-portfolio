@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 export default function WorkList({ galleries }) {
   return (
-    <section className={cx("projects-area")}>
+    <section>
       <Container>
         <Row className={cx("project-row")}>
           <Column md={4}>

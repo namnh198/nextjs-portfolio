@@ -1,0 +1,37 @@
+.exp-wrap {
+  padding: 30px;
+  background: #fff;
+  border-radius: 30px;
+  position: relative;
+  height: 100%;
+  h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #0f0f0f;
+    margin-bottom: 23px;
+  }
+
+  ul > li {
+    + li {
+      margin-top: 32px;
+    }
+    .date {
+      color: #bcbcbc;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 18px;
+      color: var(--primary-color);
+      opacity: 0.9;
+      margin-bottom: 7px;
+    }
+    .type {
+      color: #bcbcbc;
+      font-size: 14px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+}

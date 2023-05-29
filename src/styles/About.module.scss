@@ -1,3 +1,35 @@
-.about-area {
-  padding-top: 80px;
+.mt-24 {
+  margin-top: 24px;
+}
+
+.profile-contact-credential {
+  > div {
+    &:nth-child(2) {
+      flex: 1;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-contact-credential {
+    flex-wrap: wrap;
+    > div {
+      width: calc(50% - 12px);
+      flex: none;
+    }
+    > div {
+      &:nth-child(2) {
+        order: 3;
+      }
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .profile-contact-credential {
+    > div {
+      width: 100%;
+      flex: none;
+    }
+  }
 }
