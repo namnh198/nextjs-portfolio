@@ -8,7 +8,6 @@ export default function Social() {
   return (
     <Widget
       animation="zoom-in"
-      className={cx("socials-list")}
       title="Profiles"
       category="Stay with me"
       href="/contact"

@@ -10,6 +10,7 @@ import {
   WidgetGallery,
 } from "@/components/shared";
 import {
+  Banner,
   Contact,
   Experience,
   Profile,
@@ -29,6 +30,7 @@ export default function Home({ options }) {
               <Profile />
             </Column>
             <Column md={6} className={cx("profile-wrapper")}>
+              <Banner />
               <WidgetGallery className={cx("credentials-works")}>
                 <Widget
                   animation="zoom-in"
