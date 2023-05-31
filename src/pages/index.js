@@ -13,9 +13,12 @@ import {
   Banner,
   Contact,
   Experience,
+  Note,
   Profile,
   Service,
+  Sign,
   Social,
+  Work,
 } from "@/components/home";
 
 const cx = classNames.bind(styles);
@@ -30,47 +33,37 @@ export default function Home({ options }) {
               <Profile />
             </Column>
             <Column md={6} className={cx("profile-wrapper")}>
-              <Banner />
-              <WidgetGallery className={cx("credentials-works")}>
-                <Widget
-                  animation="zoom-in"
-                  image="/images/sign.png"
-                  href="/credentials"
-                  title="Credentials"
-                  category="More about me"
-                />
-                <Widget
-                  animation="zoom-in"
-                  image="/images/my-works.png"
-                  href="/works"
-                  title="Projects"
-                  category="Showcase"
-                />
-              </WidgetGallery>
+              <Row className={cx("banner-wrapper")}>
+                <Column sm={12}>
+                  <Banner />
+                </Column>
+              </Row>
+              <Row className={cx("credential-work-wrapper")}>
+                <Column sm={6}>
+                  <Sign />
+                </Column>
+                <Column sm={6}>
+                  <Work />
+                </Column>
+              </Row>
             </Column>
           </Row>
-          <Row className={cx("mt-24")}>
-            <Column md={12}>
-              <WidgetGallery className={cx("notes-services")}>
-                <Widget
-                  animation="zoom-in"
-                  target="_blank"
-                  className={cx("blog-box")}
-                  image="/images/blog.png"
-                  href="https://tieugum.com/"
-                  title="My Notes"
-                  category="Blog"
-                />
-                <Service />
-                <Social />
-              </WidgetGallery>
+          <Row className={cx("mt-24", "note-services-social-wrapper")}>
+            <Column md={3}>
+              <Note />
+            </Column>
+            <Column md={6} className={cx("services")}>
+              <Service />
+            </Column>
+            <Column md={3}>
+              <Social />
             </Column>
           </Row>
-          <Row className={cx("mt-24")}>
-            <Column md={6} className={cx("client-contact-wrapper")}>
+          <Row className={cx("mt-24", "client-contact-wrapper")}>
+            <Column md={6}>
               <Experience />
             </Column>
-            <Column md={6} className={cx("client-contact-wrapper")}>
+            <Column md={6}>
               <Contact />
             </Column>
           </Row>

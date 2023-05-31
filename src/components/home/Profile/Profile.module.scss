@@ -3,7 +3,9 @@
     position: relative;
     padding: 50px 46px;
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 30px;
   }
 

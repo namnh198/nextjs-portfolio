@@ -1,45 +1,60 @@
 .mt-24 {
   margin-top: 24px;
 }
-.credentials-works {
-  > div {
-    flex: 1;
-    width: 50%;
-  }
+.mb-24 {
+  margin-bottom: 24px;
 }
-
-.blog-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.banner-wrapper {
+  margin-bottom: 24px;
 }
 
 @media (max-width: 920px) {
+  .banner-wrapper {
+    margin-top: 24px;
+  }
+
+  .credential-work-wrapper {
+    > div {
+      width: 50%;
+    }
+  }
+
+  .note-services-social-wrapper {
+    > div {
+      width: 50%;
+      &:nth-child(2) {
+        width: 100%;
+        margin-top: 24px;
+        order: 3;
+      }
+    }
+  }
+
   .client-contact-wrapper {
-    width: 100%;
+    > div {
+      width: 100%;
+      margin-bottom: 24px;
+      :last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .profile-wrapper {
     flex: 0 0 auto;
     width: 100%;
   }
-
-  .notes-services {
-    flex-wrap: wrap;
-
-    > div {
-      width: calc(50% - 12px);
-
-      &:nth-child(2) {
-        order: 3;
-      }
-    }
-  }
 }
 
-@media (max-width: 520px) {
-  .notes-services > div,
-  .credentials-works > div {
-    width: 100%;
-    flex: none;
+@media (max-width: 500px) {
+  .note-services-social-wrapper,
+  .credential-work-wrapper {
+    > div {
+      width: 100%;
+      margin-bottom: 24px;
+      &:nth-child(2) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
   }
 }

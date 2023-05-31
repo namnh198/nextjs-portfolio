@@ -4,3 +4,6 @@ export { default as Social } from "./Social/Social";
 export { default as Experience } from "./Experience/Experience";
 export { default as Contact } from "./Contact/Contact";
 export { default as Banner } from "./Banner/Banner";
+export { default as Sign } from "./Sign/Sign";
+export { default as Work } from "./Work/Work";
+export { default as Note } from "./Note/Note";

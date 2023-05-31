@@ -1,6 +1,5 @@
 .banner {
   padding: 17px 25px;
-  margin-bottom: 24px;
 
   ul {
     display: flex;
@@ -21,5 +20,11 @@
     i {
       font-size: 30px;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .banner > ul {
+    gap: 24px;
   }
 }

@@ -3,6 +3,10 @@
   border-radius: 30px;
   background: #fff;
   padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   * {
     position: relative;
@@ -78,7 +82,6 @@
   }
 
   .widget-img {
-    width: 75%;
     height: auto;
   }
 }
@@ -86,8 +89,5 @@
 @media (max-width: 585px) {
   .widget {
     width: 100%;
-  }
-  .widget-img {
-    width: auto;
   }
 }
