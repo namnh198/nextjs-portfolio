@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./Contact.module.scss";
 import { Explore, ImageTheme, Widget } from "@/components/shared";
-import { StarIconDark, StarIconLight } from "@/assets";
+import { StarIconDark, StarIconLight } from "@/assets/images";
 
 const cx = classNames.bind(styles);
 

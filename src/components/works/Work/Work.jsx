@@ -18,7 +18,7 @@ export default function Work({ className, project, animation }) {
       >
         <div className={cx("project-img")}>
           <Image
-            src={project.cover}
+            src={project.image}
             alt={project.title}
             width={339}
             height={287}

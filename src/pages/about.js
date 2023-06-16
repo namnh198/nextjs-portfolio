@@ -8,16 +8,18 @@ import {
   Widget,
 } from "@/components/shared";
 import { MainTemplate } from "@/components/templates";
-import Notion from "@/untils/Notion";
 import { Experience, Profile } from "@/components/about";
 import { experienceAbout, educationAbout } from "@/untils/About";
 import { Contact, Social, Sign } from "@/components/home";
 
 const cx = classNames.bind(style);
+const head = {
+  title: "About",
+};
 
-export default function About({ options, head }) {
+export default function About() {
   return (
-    <MainTemplate options={options} head={head}>
+    <MainTemplate head={head}>
       <section>
         <Container>
           <Profile />
@@ -45,17 +47,3 @@ export default function About({ options, head }) {
     </MainTemplate>
   );
 }
-
-export const getStaticProps = async () => {
-  const options = await Notion.getOptions();
-  const head = {
-    title: "About",
-  };
-  return {
-    props: {
-      options,
-      head,
-    },
-    revalidate: 10,
-  };
-};

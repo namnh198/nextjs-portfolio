@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./Heading.module.scss";
-import { StarIconDark2, StarIconLight2 } from "@/assets";
+import { StarIconDark2, StarIconLight2 } from "@/assets/images";
 import { ImageTheme } from "@/components/shared";
 
 const cx = classNames.bind(styles);
@@ -12,19 +12,15 @@ export default function Heading({ className, animation, title }) {
       data-aos={animation}
     >
       <ImageTheme
-        srcDark={StarIconDark2.src}
-        srcLight={StarIconLight2.src}
+        srcDark={StarIconDark2}
+        srcLight={StarIconLight2}
         alt="Star"
-        width={StarIconLight2.width}
-        height={StarIconLight2.height}
       />
       <span>{title}</span>
       <ImageTheme
-        srcDark={StarIconDark2.src}
-        srcLight={StarIconLight2.src}
+        srcDark={StarIconDark2}
+        srcLight={StarIconLight2}
         alt="Star"
-        width={StarIconLight2.width}
-        height={StarIconLight2.height}
       />
     </h1>
   );

@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import Link from "next/link";
 import Image from "next/image";
 import { ImageTheme } from "@/components/shared";
-import { ExploreIconDark, ExploreIconLight, BgImage } from "@/assets";
+import { ExploreIconDark, ExploreIconLight, BgImage } from "@/assets/images";
 import styles from "./Widget.module.scss";
 
 const cx = classNames.bind(styles);
@@ -23,13 +23,7 @@ export default function Widget({
       className={cx("widget", { [className]: className })}
       data-aos={animation}
     >
-      <ImageTheme
-        className={cx("bg")}
-        srcDark={BgImage.src}
-        alt="Background"
-        width={BgImage.width}
-        height={BgImage.height}
-      />
+      <ImageTheme className={cx("bg")} srcDark={BgImage} alt="Background" />
       {image && <WidgetImage image={image} alt={title} />}
       {children}
       {href && (

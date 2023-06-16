@@ -1,27 +1,15 @@
 import { MainTemplate } from "@/components/templates";
 import { WorkList } from "@/components/works";
-import Notion from "@/untils/Notion";
+import { works } from "@/data/works";
 
-export default function Work({ options, head, galleries }) {
+const head = {
+  title: "Works",
+};
+
+export default function Work({ galleries }) {
   return (
-    <MainTemplate options={options} head={head}>
-      <WorkList galleries={galleries} />
+    <MainTemplate head={head}>
+      <WorkList works={works} />
     </MainTemplate>
   );
 }
-
-export const getStaticProps = async () => {
-  const options = await Notion.getOptions();
-  const galleries = await Notion.getProjectsToGallery();
-  const head = {
-    title: "Works",
-  };
-  return {
-    props: {
-      options,
-      galleries,
-      head,
-    },
-    revalidate: 10,
-  };
-};

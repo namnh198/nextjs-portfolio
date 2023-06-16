@@ -5,7 +5,7 @@ import { Column, Container, Heading, Row } from "@/components/shared";
 
 const cx = classNames.bind(styles);
 
-export default function WorkList({ galleries }) {
+export default function WorkList({ works }) {
   return (
     <section>
       <Container>
@@ -16,7 +16,7 @@ export default function WorkList({ galleries }) {
             title="All Projects"
           />
           <Column md={4}>
-            {galleries.galleryLeft.map((project) => {
+            {works.left.map((project) => {
               return (
                 <Work
                   className={cx("project-item")}
@@ -33,14 +33,14 @@ export default function WorkList({ galleries }) {
               animation="fade-up"
               title="All Projects"
             />
-            {galleries.galleryRight.map((project, index) => {
+            {works.right.map((project, index) => {
               return (
                 <div className={cx("project-right")} key={index}>
-                  {project.map((item) => {
+                  {project.map((item, i) => {
                     return (
                       <Work
                         className={cx("project-item")}
-                        key={item.id}
+                        key={i}
                         project={item}
                         animation="zoom-in"
                       />

@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { LogoDark, LogoLight } from "@/assets";
+import { LogoDark, LogoLight } from "@/assets/images";
 import styles from "./Logo.module.scss";
 import { ImageTheme } from "@/components/shared";
 

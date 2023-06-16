@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./Profile.module.scss";
 import Image from "next/image";
 import { ImageTheme, Heading } from "@/components/shared";
-import { StarIconDark, StarIconLight } from "@/assets";
+import { StarIconDark, StarIconLight } from "@/assets/images";
 
 const cx = classNames.bind(styles);
 

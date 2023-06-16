@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import { FormProvider, useForm } from "react-hook-form";
 import { EmailJs } from "@/untils/Email";
 import { useRef, useState } from "react";
-import { StarIconDark3, StarIconLight3 } from "@/assets";
+import { StarIconDark3, StarIconLight3 } from "@/assets/images";
 import { Alert, Button, ImageTheme, Input } from "@/components/shared";
 import { contactForm } from "@/untils/Contact";
 import styles from "./ContactForm.module.scss";
