@@ -5,9 +5,9 @@ export default function Work() {
     <Widget
       animation="zoom-in"
       image="/images/my-works.png"
-      href="/credentials"
-      title="Credentials"
-      category="More about me"
+      href="/works"
+      title="Projects"
+      category="Showcase"
     />
   );
 }
