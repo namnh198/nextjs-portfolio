@@ -20,7 +20,7 @@ export default function Social() {
         {socials.map((s, index) => {
           let Component = s.icon;
           return (
-            <a href={s.url} target="_blank" key={index}>
+            <a href={s.url} title={s.title} target="_blank" key={index}>
               <Component width={36} height={36} />
             </a>
           );

@@ -11,6 +11,7 @@ export default function ThemeSwitcher() {
   return (
     <button
       className={cx("switch-theme")}
+      title="Toggle theme"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       {resolvedTheme === "dark" ? <IconDarkMode /> : <IconLightMode />}

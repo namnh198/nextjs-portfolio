@@ -21,7 +21,7 @@ export default function Banner() {
           const Component = s.icon;
           return (
             <li key={index}>
-              <a href={s.url} target="_blank">
+              <a href={s.url} title={s.title} target="_blank">
                 <Component width={32} height={32} />
               </a>
             </li>

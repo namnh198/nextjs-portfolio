@@ -15,7 +15,11 @@ export default function Profile() {
         <h4>A Web Designer</h4>
         <h1>Nam Nguyen</h1>
         <p>I am a Web Designer based in Vietnam</p>
-        <Explore className={cx("profile-explore")} href="/about" />
+        <Explore
+          className={cx("profile-explore")}
+          title="Profile"
+          href="/about"
+        />
       </div>
     </Widget>
   );

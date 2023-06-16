@@ -19,7 +19,7 @@ export default function Contact() {
       <h1>
         Let&rsquo;s <br /> work <span>together.</span>{" "}
       </h1>
-      <Explore href="/contact" className={cx("explore")} />
+      <Explore href="/contact" title="Contact" className={cx("explore")} />
     </Widget>
   );
 }

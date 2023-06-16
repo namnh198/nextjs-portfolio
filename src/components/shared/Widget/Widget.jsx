@@ -27,7 +27,7 @@ export default function Widget({
       {image && <WidgetImage image={image} alt={title} />}
       {children}
       {href && (
-        <Explore overlay={overlay} to={to} href={href}>
+        <Explore overlay={overlay} title={title} to={to} href={href}>
           <div className={cx("explore-info")}>
             <p>{category}</p>
             <h1>{title}</h1>
@@ -50,9 +50,17 @@ const WidgetImage = ({ image, alt }) => {
   );
 };
 
-export const Explore = ({ className, overlay = true, href, to, children }) => {
+export const Explore = ({
+  className,
+  title = "",
+  overlay = true,
+  href,
+  to,
+  children,
+}) => {
   let ExploreLink = Link,
     props = {
+      title,
       href,
     };
   if (to) {
