@@ -16,11 +16,11 @@ export default function WorkList({ works }) {
             title="All Projects"
           />
           <Column md={4}>
-            {works.left.map((project) => {
+            {works.left.map((project, index) => {
               return (
                 <Work
                   className={cx("project-item")}
-                  key={project.id}
+                  key={index}
                   project={project}
                   animation="zoom-in"
                 />
