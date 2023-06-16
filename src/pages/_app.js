@@ -1,5 +1,6 @@
 import "@/styles/styles.scss";
 import { useEffect } from "react";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import Aos from "aos";
 import { ThemeProvider } from "next-themes";
 
@@ -12,8 +13,11 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme="light">
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <GoogleAnalytics trackPageViews />
+      <ThemeProvider defaultTheme="light">
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 }
