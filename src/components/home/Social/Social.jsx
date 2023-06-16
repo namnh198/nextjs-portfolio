@@ -1,8 +1,11 @@
 import classNames from "classnames/bind";
+import { LinkedIn, GitHub } from "iconoir-react";
 import styles from "./Social.module.scss";
 import { Widget } from "@/components/shared";
+import { getSocial } from "@/data/socials";
 
 const cx = classNames.bind(styles);
+const socials = getSocial("linkedin", "github");
 
 export default function Social() {
   return (
@@ -14,12 +17,14 @@ export default function Social() {
       overlay={false}
     >
       <div className={cx("socials-icon")}>
-        <a href="https://linkedin.com/in/namnh198" target="_blank">
-          <i className="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/namnh198" target="_blank">
-          <i className="fa-brands fa-github"></i>
-        </a>
+        {socials.map((s, index) => {
+          let Component = s.icon;
+          return (
+            <a href={s.url} target="_blank" key={index}>
+              <Component width={36} height={36} />
+            </a>
+          );
+        })}
       </div>
     </Widget>
   );

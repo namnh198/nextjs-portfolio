@@ -1,8 +1,10 @@
 import classNames from "classnames/bind";
-import { contactInfos, contactSocials } from "@/untils/Contact";
+import { infomations } from "@/data/contact";
 import styles from "./ContactInfo.module.scss";
+import { getSocial } from "@/data/socials";
 
 const cx = classNames.bind(styles);
+const socials = getSocial("linkedin", "github", "facebook");
 
 export default function ContactInfo({ settings }) {
   return (
@@ -10,12 +12,13 @@ export default function ContactInfo({ settings }) {
       <div className={cx("infomations")}>
         <h3 data-aos="fade-up">Contact Info</h3>
         <ul className={cx("contact-details")}>
-          {contactInfos.map((item, index) => {
+          {infomations.map((item, index) => {
+            let Component = item.icon;
             return (
               <li key={index} data-aos="zoom-in">
                 <div className={cx("icon-box")}>
                   <a href={item.url} target="_blank">
-                    <i className={item.icon} />
+                    <Component width={32} height={32} />
                   </a>
                 </div>
                 <div className={cx("right")}>
@@ -34,11 +37,12 @@ export default function ContactInfo({ settings }) {
       <div className={cx("socials")}>
         <h3 data-aos="fade-up">Social Info</h3>
         <ul className={cx("social-links")} data-aos="zoom-in">
-          {contactSocials.map((social, index) => {
+          {socials.map((s, index) => {
+            let Component = s.icon;
             return (
               <li key={index}>
-                <a href={social.url} target="_blank">
-                  <i className={social.icon}></i>
+                <a href={s.url} target="_blank">
+                  <Component width={36} height={36} />
                 </a>
               </li>
             );

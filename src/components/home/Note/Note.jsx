@@ -4,9 +4,10 @@ export default function Sign() {
     <Widget
       animation="zoom-in"
       image="/images/blog.png"
-      href="/credentials"
-      title="Credentials"
-      category="More about me"
+      href="https://tieugum.com/"
+      to
+      title="My Notes"
+      category="Blog"
     />
   );
 }

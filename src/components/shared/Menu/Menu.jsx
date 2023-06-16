@@ -10,7 +10,7 @@ export default function Menu({ menuClass, menu }) {
 
   return (
     <ul className={cx(menuClass)}>
-      {menu.map((item) => {
+      {menu.map((item, index) => {
         let Component = Link;
         let props = {};
         if (isToHref(item.url)) {
@@ -20,7 +20,7 @@ export default function Menu({ menuClass, menu }) {
 
         return (
           <li
-            key={item.id}
+            key={index}
             className={cx({ active: router.pathname === item.url })}
           >
             <Component href={item.url} title={item.title} {...props}>

@@ -8,7 +8,7 @@
   background: #fbfbfc;
   border-radius: 30px;
   a {
-    padding: 25px 27px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,19 @@
   .socials-icon {
     padding: 16px;
     a {
-      padding: 16px 18px;
+      padding: 14px;
     }
+  }
+}
+
+@media (max-width: 920px) {
+  .socials-icon a {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 541px) {
+  .socials-icon a {
+    padding: 16px;
   }
 }

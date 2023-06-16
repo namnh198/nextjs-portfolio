@@ -17,12 +17,14 @@
     "dotenv": "^16.0.3",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "iconoir-react": "^6.8.0",
     "moment": "^2.29.4",
     "next": "13.4.4",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.44.0",
+    "react-icons": "^4.9.0",
     "sass": "^1.62.1",
     "sharp": "^0.32.1"
   }

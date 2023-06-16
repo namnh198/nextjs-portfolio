@@ -1,37 +1,32 @@
 import classNames from "classnames/bind";
+import { Facebook, LinkedIn, GitHub, YouTube, Instagram } from "iconoir-react";
 import styles from "./Banner.module.scss";
 import { Widget } from "@/components/shared";
+import { getSocial } from "@/data/socials";
 
 const cx = classNames.bind(styles);
+const socials = getSocial(
+  "facebook",
+  "github",
+  "instagram",
+  "linkedin",
+  "youtube"
+);
+
 export default function Banner() {
   return (
     <Widget animation="zoom-in" className={cx("banner")}>
       <ul>
-        <li>
-          <a href="https://facebook.com/namnh198" target="_blank">
-            <i className="fa-brands fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/namnh198" target="_blank">
-            <i className="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://linkedin.com/in/namnh198" target="_blank">
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://youtube.com/@namnh198" target="_blank">
-            <i className="fa-brands fa-youtube"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/namnh198">
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-        </li>
+        {socials.map((s, index) => {
+          const Component = s.icon;
+          return (
+            <li key={index}>
+              <a href={s.url} target="_blank">
+                <Component width={32} height={32} />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </Widget>
   );

@@ -11,7 +11,7 @@ import { MainTemplate } from "@/components/templates";
 import Notion from "@/untils/Notion";
 import { Experience, Profile } from "@/components/about";
 import { experienceAbout, educationAbout } from "@/untils/About";
-import { Contact, Social } from "@/components/home";
+import { Contact, Social, Sign } from "@/components/home";
 
 const cx = classNames.bind(style);
 
@@ -29,19 +29,15 @@ export default function About({ options, head }) {
               <Experience title="Education" experiences={educationAbout} />
             </Column>
           </Row>
-          <Row className={cx("mt-24")}>
-            <Column md={12}>
-              <WidgetGallery className={cx("profile-contact-credential")}>
-                <Social />
-                <Contact />
-                <Widget
-                  animation="zoom-in"
-                  image="/images/sign.png"
-                  href="/credentials"
-                  title="Credentials"
-                  category="More about me"
-                />
-              </WidgetGallery>
+          <Row className={cx("mt-24", "social-contact-credential-wrapper")}>
+            <Column md={3}>
+              <Social />
+            </Column>
+            <Column md={6} className={cx("services")}>
+              <Contact />
+            </Column>
+            <Column md={3}>
+              <Sign />
             </Column>
           </Row>
         </Container>

@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import { Figma, Code, CloudSync, DatabaseSettings } from "iconoir-react";
 import styles from "./Service.module.scss";
 import { Widget } from "@/components/shared";
 
@@ -14,10 +15,10 @@ export default function Service() {
       href="/services"
     >
       <div className={cx("services-icon")}>
-        <i className="fa-brands fa-figma"></i>
-        <i className="fa-brands fa-magento"></i>
-        <i className="fa-brands fa-docker"></i>
-        <i className="fa-brands fa-js"></i>
+        <Figma width={44} height={44} color="#5b78f6" />
+        <Code width={44} height={44} color="#5b78f6" />
+        <DatabaseSettings width={44} height={44} color="#5b78f6" />
+        <CloudSync width={44} height={44} color="#5b78f6" />
       </div>
     </Widget>
   );

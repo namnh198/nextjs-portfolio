@@ -2,14 +2,16 @@ import classNames from "classnames/bind";
 import { ContactForm, ContactInfo } from "@/components/contacts";
 import { Container } from "@/components/shared";
 import { MainTemplate } from "@/components/templates";
-import Notion from "@/untils/Notion";
 import styles from "@/styles/Contact.module.scss";
 
 const cx = classNames.bind(styles);
+const head = {
+  title: "Contact",
+};
 
-export default function Contact({ options, head }) {
+export default function Contact({ head }) {
   return (
-    <MainTemplate options={options} head={head}>
+    <MainTemplate head={head}>
       <section className={cx("contact-area")}>
         <Container>
           <div className={cx("contact-content")}>
@@ -21,17 +23,3 @@ export default function Contact({ options, head }) {
     </MainTemplate>
   );
 }
-
-export const getStaticProps = async () => {
-  const options = await Notion.getOptions();
-  const head = {
-    title: "Contact",
-  };
-  return {
-    props: {
-      options,
-      head,
-    },
-    revalidate: 10,
-  };
-};

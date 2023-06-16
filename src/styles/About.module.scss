@@ -23,6 +23,17 @@
       }
     }
   }
+
+  .social-contact-credential-wrapper {
+    > div {
+      width: 50%;
+      &:nth-child(2) {
+        width: 100%;
+        margin-top: 24px;
+        order: 3;
+      }
+    }
+  }
 }
 
 @media (max-width: 585px) {
@@ -30,6 +41,19 @@
     > div {
       width: 100%;
       flex: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .social-contact-credential-wrapper {
+    > div {
+      width: 100%;
+      margin-bottom: 24px;
+      &:nth-child(2) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
     }
   }
 }
