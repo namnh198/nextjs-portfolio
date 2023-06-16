@@ -1,13 +1,15 @@
 import classNames from "classnames/bind";
 import { FormProvider, useForm } from "react-hook-form";
-import { EmailJs } from "@/untils/Email";
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { StarIconDark3, StarIconLight3 } from "@/assets/images";
 import { Alert, Button, ImageTheme, Input } from "@/components/shared";
-import { contactForm } from "@/untils/Contact";
+import { formFields } from "@/data/contact";
+import { options } from "@/data/config";
 import styles from "./ContactForm.module.scss";
 
 const cx = classNames.bind(styles);
+const { serviceId, templateId, publicKey } = options.setting.emailjs;
 
 export default function ContactForm() {
   const form = useRef();
@@ -19,11 +21,13 @@ export default function ContactForm() {
   const handleSubmitContactForm = (data, e) => {
     e.isDefaultPrevented();
     setDisabledBtn(true);
-    EmailJs(form.current).then(
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       () => {
         setDisabledBtn(false);
         setSuccess(true);
         setError(false);
+        methods.reset();
       },
       () => {
         setDisabledBtn(false);
@@ -31,8 +35,6 @@ export default function ContactForm() {
         setError(true);
       }
     );
-
-    // methods.reset();
   };
   return (
     <div data-aos="zoom-in" className={cx("contact-form")}>
@@ -66,8 +68,8 @@ export default function ContactForm() {
                 message="An error has occurred. Please try again."
               />
             )}
-            {contactForm.map((form, index) => {
-              return <Input key={index} {...form} />;
+            {formFields.map((field, index) => {
+              return <Input key={index} {...field} />;
             })}
             <Button type="submit" block disabled={disabledBtn}>
               Send Message

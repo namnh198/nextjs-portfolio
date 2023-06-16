@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Header, Footer } from "@/components/templates";
-import { HeadMeta } from "@/untils/HeadMeta";
 import { options } from "@/data/config";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,3 +20,17 @@ export default function MainTemplate({ head, children }) {
     </>
   );
 }
+
+export const HeadMeta = (options, head = {}) => {
+  const { setting } = options;
+  if (!head.title) {
+    head.title = setting.site_desc;
+  }
+  const title = `${setting.site_name} | ${head.title}`;
+  const description = head?.description ?? setting.site_desc;
+
+  return {
+    title,
+    description,
+  };
+};

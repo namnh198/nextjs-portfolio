@@ -9,7 +9,7 @@ import {
 } from "@/components/shared";
 import { MainTemplate } from "@/components/templates";
 import { Experience, Profile } from "@/components/about";
-import { experienceAbout, educationAbout } from "@/untils/About";
+import { experiences, educations } from "@/data/about";
 import { Contact, Social, Sign } from "@/components/home";
 
 const cx = classNames.bind(style);
@@ -25,10 +25,10 @@ export default function About() {
           <Profile />
           <Row className={cx("mt-24")}>
             <Column md={6} data-aos="zoom-in">
-              <Experience title="Experience" experiences={experienceAbout} />
+              <Experience title="Experience" experiences={experiences} />
             </Column>
             <Column md={6} data-aos="zoom-in">
-              <Experience title="Education" experiences={educationAbout} />
+              <Experience title="Education" experiences={educations} />
             </Column>
           </Row>
           <Row className={cx("mt-24", "social-contact-credential-wrapper")}>

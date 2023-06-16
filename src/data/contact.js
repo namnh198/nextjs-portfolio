@@ -20,7 +20,7 @@ export const infomations = [
   },
 ];
 
-export const form = [
+export const formFields = [
   {
     name: "name",
     type: "text",

@@ -1,9 +1,14 @@
 export const options = {
   setting: {
-    site_name: "NamNH",
-    site_desc:
-      "I design and code beautifully simple things, and I love what I do.",
-    site_theme: false,
+    site_url: process.env.NEXT_PUBLIC_SITE_URL || "https://namnh198.com",
+    site_name: process.env.NEXT_PUBLIC_SITE_NAME || "",
+    site_desc: process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "",
+    site_theme: process.env.NEXT_PUBLIC_SITE_THEME || false,
+    emailjs: {
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+    },
   },
   menu: [
     { title: "Home", url: "/" },
