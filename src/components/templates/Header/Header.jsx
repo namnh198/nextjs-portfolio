@@ -32,7 +32,7 @@ export default function Header({ setting, menu }) {
             </Button>
           </nav>
           <div className={cx("right-menu")}>
-            {setting.site_theme === "true" && <ThemeSwitcher />}
+            {setting.site_theme && <ThemeSwitcher />}
             <Button
               href="https://drive.google.com/file/d/15qWmvhXed708FnEaXxhmHrHTVS0lJT38/view?usp=drive_link"
               title="Resume"

@@ -31,9 +31,10 @@ export default function Profile() {
           />
           <h1>Nam Nguyen</h1>
           <p>
-            I am a San francisco-based product designer with a focus on web
-            design, illustration, a visual development. I have a diverse range
-            of experience having worked across various fields and industries.
+            I&rsquo;m a software engineer based in Ho Chi Minh City, Vietnam
+            with a focus on web design and cloud services. I have a diverse
+            range of experience having worked across various fields and
+            industries.
           </p>
         </div>
       </div>

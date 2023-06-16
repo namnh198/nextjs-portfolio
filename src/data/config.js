@@ -3,7 +3,7 @@ export const options = {
     site_name: "NamNH",
     site_desc:
       "I design and code beautifully simple things, and I love what I do.",
-    site_theme: true,
+    site_theme: false,
   },
   menu: [
     { title: "Home", url: "/" },
