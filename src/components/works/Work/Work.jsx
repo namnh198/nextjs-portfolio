@@ -22,6 +22,7 @@ export default function Work({ className, project, animation }) {
             alt={project.title}
             width={339}
             height={287}
+            priority
           />
         </div>
       </Widget>

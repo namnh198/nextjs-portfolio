@@ -7,9 +7,10 @@ import styles from "@/styles/Contact.module.scss";
 const cx = classNames.bind(styles);
 const head = {
   title: "Contact",
+  url: "/contact",
 };
 
-export default function Contact({ head }) {
+export default function Contact() {
   return (
     <MainTemplate head={head}>
       <section className={cx("contact-area")}>

@@ -4,6 +4,7 @@ import { works } from "@/data/works";
 
 const head = {
   title: "Works",
+  url: "/works",
 };
 
 export default function Work({ galleries }) {

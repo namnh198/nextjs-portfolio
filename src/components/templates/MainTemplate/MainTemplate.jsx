@@ -39,7 +39,10 @@ export const HeadMeta = (options, head = {}) => {
   }
   const title = `${setting.site_name} | ${head.title}`;
   const description = head?.description ?? setting.site_desc;
-  const url = head?.url ?? setting.site_url;
+  let url = setting.site_url;
+  if (head.url) {
+    url += head.url;
+  }
 
   return {
     title,

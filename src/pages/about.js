@@ -1,12 +1,6 @@
 import classNames from "classnames/bind";
 import style from "@/styles/About.module.scss";
-import {
-  Column,
-  Container,
-  Row,
-  WidgetGallery,
-  Widget,
-} from "@/components/shared";
+import { Column, Container, Row } from "@/components/shared";
 import { MainTemplate } from "@/components/templates";
 import { Experience, Profile } from "@/components/about";
 import { experiences, educations } from "@/data/about";
@@ -15,6 +9,7 @@ import { Contact, Social, Sign } from "@/components/home";
 const cx = classNames.bind(style);
 const head = {
   title: "About",
+  url: "/about",
 };
 
 export default function About() {

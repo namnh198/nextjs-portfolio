@@ -46,6 +46,7 @@ const WidgetImage = ({ image, alt }) => {
       alt={alt}
       width={224}
       height={124}
+      priority
     />
   );
 };
@@ -74,11 +75,10 @@ export const Explore = ({
         {children}
         <ExploreLink className={cx("explore-btn")} {...props}>
           <ImageTheme
-            srcDark={ExploreIconDark.src}
-            srcLight={ExploreIconLight.src}
+            srcDark={ExploreIconDark}
+            srcLight={ExploreIconLight}
             alt="Explore"
-            width={ExploreIconLight.width}
-            height={ExploreIconLight.height}
+            priority
           />
         </ExploreLink>
       </div>
